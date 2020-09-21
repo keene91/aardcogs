@@ -712,7 +712,7 @@ class Untappd(BaseCog):
         return
 
     @commands.command()
-    async def profile(self, ctx, profile: str = None):
+    async def utprofile(self, ctx, profile: str = None):
         """Search for a user's information by providing their profile name,
         discord mentions OK"""
 
@@ -1676,7 +1676,7 @@ async def search_beer_to_embed(config, ctx, channels, query, limit=None, homebre
     return result
 
 
-async def profile_lookup(config, ctx, profile, limit=5):
+async def utprofile_lookup(config, ctx, profile, limit=5):
     """Looks up a profile in untappd by username"""
     query = urllib.parse.quote_plus(profile)
     api_key = "client_id={}&client_secret={}".format(
